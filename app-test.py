@@ -1,6 +1,7 @@
 import unittest
 import os
 import tempfile
+import json
 
 import app
 
@@ -88,6 +89,15 @@ class FlaskrTestCase(unittest.TestCase):
         assert b'No entries here so far' not in rv.data
         assert b'&lt;Hello&gt;' in rv.data
         assert b'<strong>HTML</strong> allowed here' in rv.data
+
+# Manually test this out by running the server and adding two new entries.
+# Click on one of them. It should be removed from the DOM as well as the database
+# localhost:5000/delete/1 
+    def test_delete_message(self):
+        """Ensure the messages are being deleted."""
+        rv = self.app.get('/delete/1')
+        data = json.loads((rv.data).decode('utf-8'))
+        self.assertEqual(data['status'], 1)
 
 
 if __name__ == '__main__':
