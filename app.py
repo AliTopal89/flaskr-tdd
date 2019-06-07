@@ -7,7 +7,7 @@ from flask import Flask, request, session, g, redirect, url_for, \
 from flask_sqlalchemy import SQLAlchemy
 
 # get the folder where this file runs
-basedir - os.path.abspath(os.path.dirname(__file__))
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 # configuration
 DATABASE = 'flaskr.db'
