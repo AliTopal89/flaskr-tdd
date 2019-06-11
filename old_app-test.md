@@ -1,3 +1,4 @@
+took some notes on testing too. TODO-should be on a readme
 <!-- class FlaskrTestCase(unittest.TestCase):
 
     # The code in the setUp() method creates a new test client and initializes a new database. 
