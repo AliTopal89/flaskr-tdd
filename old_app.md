@@ -1,4 +1,5 @@
 took some notes on this before
+took some notes on testing too. TODO-should be on a readme will keep it here as a reminder
 
 <!-- # create and initialize app
 app = Flask(__name__)
